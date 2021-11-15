@@ -6,6 +6,7 @@ class CustomTheme {
       primaryColor: Colors.white,
       scaffoldBackgroundColor: Color(0xffF5F5F5),
       appBarTheme: AppBarTheme(
+        backgroundColor: Colors.white,
         centerTitle: true,
       ),
     );
@@ -16,6 +17,7 @@ class CustomTheme {
         primaryColor: Colors.black,
         scaffoldBackgroundColor: Color(0xff191919),
         appBarTheme: AppBarTheme(
+          backgroundColor: Colors.black,
           centerTitle: true,
         ));
   }
