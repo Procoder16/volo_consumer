@@ -21,20 +21,6 @@ class HomeScreen extends StatelessWidget {
           ),
           onPressed: () {},
         ),
-        // title: Row(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: [
-        //     Image(
-        //       image: kAppLogo1,
-        //       fit: BoxFit.cover,
-        //       height: screenHeight * 0.032,
-        //     ),
-        //     Text(
-        //       'VOLO',
-        //       style: TextStyle(color: Colors.black),
-        //     ),
-        //   ],
-        // ),
         title: Text(
           'VOLO',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
@@ -53,7 +39,46 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Container(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
+              Expanded(
+                child: CustomScrollView(
+                  physics: const BouncingScrollPhysics(
+                    parent: AlwaysScrollableScrollPhysics(),
+                  ),
+                  slivers: <Widget>[
+                    SliverAppBar(
+                      expandedHeight: 135,
+                      backgroundColor: Colors.white,
+                      automaticallyImplyLeading: false,
+                      flexibleSpace: FlexibleSpaceBar(
+                        collapseMode: CollapseMode.parallax,
+                        background: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Text(
+                                "Welcome\nback ,",
+                                style: TextStyle(fontSize: 50),
+                              ),
+                            ),
+                            // Padding(
+                            //   padding: EdgeInsets.all(5),
+                            //   child: Text(
+                            //     "",
+                            //     "back ,",
+                            //     style: TextStyle(fontSize: 50),
+                            //   ),
+                            // ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               Padding(
                 padding: EdgeInsets.fromLTRB(
                   0,
@@ -183,3 +208,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+// ${_activeUser.user!.username!.split(' ')[0]}
