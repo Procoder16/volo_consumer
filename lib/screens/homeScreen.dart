@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:volo/utils/constants.dart';
 
+import 'package:volo/models/drawer.dart';
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,17 +12,22 @@ class HomeScreen extends StatelessWidget {
     double screenHeight = _mediaQueryData.size.height;
 
     return Scaffold(
+      drawer: SideDrawer(),
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.black,
+          size: 38,
+        ),
         backgroundColor: Colors.white,
         centerTitle: true,
-        leading: IconButton(
-          icon: Icon(
-            Icons.sort,
-            size: 38,
-            color: Colors.black,
-          ),
-          onPressed: () {},
-        ),
+        // leading: IconButton(
+        //   icon: Icon(
+        //     Icons.sort,
+        //     size: 38,
+        //     color: Colors.black,
+        //   ),
+        //   onPressed: () {},
+        // ),
         title: Text(
           'VOLO',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
