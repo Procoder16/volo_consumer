@@ -20,9 +20,18 @@ class HomeScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.white,
         centerTitle: true,
-        title: Text(
-          'VOLO',
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            CircleAvatar(
+              backgroundImage: AssetImage('images/logo1.png'),
+            ),
+            Text(
+              'VOLO',
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            ),
+          ],
         ),
         actions: [
           IconButton(
