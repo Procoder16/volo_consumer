@@ -12,6 +12,7 @@ class PostWidget extends StatelessWidget {
   final double noLikes;
   final double starRating;
   final String postImage;
+  final Widget RoutePage;
 
   PostWidget({
     required this.postImage,
@@ -24,6 +25,7 @@ class PostWidget extends StatelessWidget {
     required this.companyLogo,
     required this.noLikes,
     required this.starRating,
+    required this.RoutePage,
   });
 
   @override
@@ -53,9 +55,17 @@ class PostWidget extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      CircleAvatar(
-                        radius: screenWidth * 0.06,
-                        backgroundImage: AssetImage(companyLogo),
+                      GestureDetector(
+                        child: CircleAvatar(
+                          radius: screenWidth * 0.06,
+                          backgroundImage: AssetImage(companyLogo),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => RoutePage),
+                          );
+                        },
                       ),
                       SizedBox(
                         width: screenWidth * 0.02,

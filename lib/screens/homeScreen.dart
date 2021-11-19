@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:volo/models/drawer.dart';
 import 'package:volo/models/postWidget.dart';
+import 'package:volo/screens/profilePage.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -88,6 +89,7 @@ class HomeScreen extends StatelessWidget {
                 companyLogo: 'images/placeholderIcon.png',
                 noLikes: 234,
                 starRating: 4.7,
+                RoutePage: ProfilePage(),
               ),
             ],
           ),
