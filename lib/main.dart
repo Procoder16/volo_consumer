@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:volo/utils/constants.dart';
-import 'package:volo/utils/theme.dart';
-import 'package:volo/screens/homeScreen.dart';
+import 'package:volo/screens/splashScreen.dart';
 
 void main() {
   runApp(
@@ -15,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: SplashScreen(),
       //theme: CustomTheme.lightTheme,
     );
   }

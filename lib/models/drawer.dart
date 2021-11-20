@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:volo/screens/authScreen.dart';
+import 'package:volo/models/alertDialogs.dart';
 
 class SideDrawer extends StatefulWidget {
   const SideDrawer({Key? key}) : super(key: key);
@@ -83,7 +85,15 @@ class _SideDrawerState extends State<SideDrawer> {
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Logout'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () async {
+              final action = await AlertDialogs.yesCancelDialog(
+                context,
+                'Logout',
+                'Are you sure you want to log out?',
+                AuthScreen(),
+                'Logged out successfully',
+              );
+            },
           ),
         ],
       ),
